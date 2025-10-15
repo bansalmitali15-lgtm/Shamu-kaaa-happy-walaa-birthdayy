@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Bubu 💙</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom, #1e3a8a, #3b82f6);
+        color: white;
+        scroll-behavior: smooth;
+        text-align: center;
+    }
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    h1, h2 {
+        margin: 20px 0;
+    }
+    p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        line-height: 1.6;
+    }
+    .btn {
+        background: #2563eb;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+    .btn:hover {
+        background: #1e40af;
+    }
+</style>
+</head>
+<body>
+
+<!-- Intro Section -->
+<section id="intro">
+    <h1>Hey Bubu 💫</h1>
+    <h2>Tap the button to open your surprise!</h2>
+    <button class="btn" onclick="openLetter()">Open Letter 💌</button>
+</section>
+
+<!-- Letter Section -->
+<section id="letter" style="display:none;">
+    <h1>Your Letter</h1>
+    <p>
+Happyyy birthdayyy jaanuu🤭💋 omg you turned 19 you oldie. Those few months have been so good and I love how we're so close now. I genuinely like spending time with you and talking to you. All the things that you've done for me mean a lot to me even though I don't express it much. To have you is like having a mother and boyfriend all together because you take care of me and even love me(like you're supposed to🙄). It feels good to have someone who I can completely rely on for anything because I know you’ll be able to help me in different ways. You make me feel safe and comfortable when I'm around you and I feel like I'm a baby. Your baby🤭. Sometimes you’re not able to understand me but I know you’re trying. I hope nothing changes between us and we get to understand and know each other better💕. Abse toh har birthdays saath mein hehe.
+    </p>
+</section>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="https://www.youtube.com/watch?v=MzZqfBHPta0" type="audio/mpeg">
+</audio>
+
+<script>
+function openLetter() {
+    document.getElementById('letter').style.display = 'block';
+    document.getElementById('bgMusic').play().catch(()=>{});
+    window.scrollTo({ top: document.getElementById('letter').offsetTop, behavior: 'smooth' });
+}
+
+window.onload = () => {
+    const music = document.getElementById('bgMusic');
+    music.volume = 0.3; // 30% volume
+};
+</script>
+
+</body>
+</html>
